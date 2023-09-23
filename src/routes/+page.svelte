@@ -24,7 +24,20 @@
 		return words.map((x) => predicate(x)).some(is_true);
 	}
 
+	// Only allow validate to be pressed every 3 seconds
+	let can_validate: boolean = true;
+	function validate_cooldown() {
+		if (can_validate === false) return
+		can_validate = false;
+		setTimeout(() => {
+			can_validate = true;
+		}, 3000);
+	}
+
 	function validate() {
+		if (!can_validate) return;
+		validate_cooldown();
+
 		const split_submission = submission.split(' ').map((word) => word.toLowerCase());
 
 		console.log(split_submission);
@@ -123,7 +136,7 @@
 					</select>
 				</div>
 
-				<button on:click={validate} class="btn btn-primary">show it!!</button>
+				<button on:click={validate} class="btn btn-primary" class:btn-disabled={!can_validate}>show it!!</button>
 			</div>
 		</div>
 	</div>
