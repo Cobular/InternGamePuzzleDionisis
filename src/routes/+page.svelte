@@ -90,6 +90,11 @@
 </script>
 
 
+<svelte:head>
+	<title>Party Till I Di-Onysus</title>
+	<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍺</text></svg>">
+</svelte:head>
+
 <div class="p-5 md:p-10 text-3xl xs:text-4xl sm:text-5xl md:text-6xl font-serif flex flex-col md:flex-row gap-2 md:gap-4 items-center">
 		<p class="text-6xl">🍺</p>
 		<p>Party Till I Di-Onysus</p>
@@ -127,12 +132,12 @@
 						<span class="label-text">who to ask?</span>
 					</label>
 					<select name="person_target" bind:value={choice} class="input select-secondary">
-						<option value="1">bald guy</option>
-						<option value="2">beard guy</option>
-						<option value="3">crown girl</option>
-						<option value="4">long hair girl</option>
-						<option value="5">other dude</option>
-						<option value="6">dionisis herself :O</option>
+						<option value="1">bald god</option>
+						<option value="2">beard god</option>
+						<option value="3">crown goddess</option>
+						<option value="4">long hair goddess</option>
+						<option value="5">other god</option>
+						<option value="6">dionysus herself :O</option>
 					</select>
 				</div>
 
